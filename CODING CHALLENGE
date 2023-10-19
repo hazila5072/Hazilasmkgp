@@ -1,0 +1,42 @@
+#!/usr/bin/env python
+
+import random
+
+name1 = input("APAKAH NAMA ANDA?\n")
+print("SELAMAT MENEKA!",name1)
+
+print("SILA ENTER")
+name2 = input("*TAIP DENGAN HURUF KECIL SAHAJA*\n")
+
+print(" ",name2)
+
+
+def main():
+    """Start a MUSICS guessing game."""
+
+    print("SILA PILIH MUZIK: tradisional,balada,jazz,nasyid,pop!")
+
+    
+    muzik = [
+        "tradisional",
+        "balada",
+        "jazz",
+        "nasyid",
+        "pop",
+        ]
+
+    x = random.choice(muzik)
+    """print(x)"""
+    guess = None
+
+    while x != guess:
+
+        guess = str(input("APAKAH MUZIK YANG ANDA PILIH?"))
+        
+        if x == guess:
+            print("TEKAAN SAYA IALAH {}. TAHNIAH & SYABAS,JAWAPAN ANDA TEPAT!".format(guess))
+            break
+        else:
+            print("TEKAAN SAYA IALAH {}. MAAF JAWAPAN KURANG TEPAT. SILA CUBA LAGI!".format(guess))
+
+main()
